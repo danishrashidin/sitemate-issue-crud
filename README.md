@@ -4,8 +4,7 @@
 
 ## Backend
 
-1. PostgreSQL
-2. ExpressJS
+1. ExpressJS
 
 ## Frontend
 
