@@ -8,19 +8,19 @@ class IssuesRoute extends BaseRoute {
 
     protected initRoutes(): void {
         // Get All
-        // this.router.route("/issues").get(issuesController)
+        this.router.route("/issues").get(issuesController.getIssues)
 
         // Get One
-        // this.router.route("/issues/:id").get(issuesController)
+        this.router.route("/issues/:id").get(issuesController.getIssue)
 
         // Create One
-        // this.router.route("/issue").post(issuesController)
+        this.router.route("/issue").post(issuesController.createIssue)
 
         // Update One
-        // this.router.route("/issue/:id").put(issuesController)
+        this.router.route("/issue/:id").put(issuesController.updateIssue)
 
         // Delete One
-        // this.router.route("/issue/:id").delete(issuesController)
+        this.router.route("/issue/:id").delete(issuesController.deleteIssue)
     }
 }
 

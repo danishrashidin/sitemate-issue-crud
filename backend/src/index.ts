@@ -9,6 +9,7 @@ const app = express();
 const router = express.Router();
 
 app.use(router);
+app.use(express.json());
 
 // Health Check
 app.use("/", healthRoute);
