@@ -9,7 +9,6 @@ class IssueController {
     }
 
     getIssues(req: Request, res: Response) {
-        console.log(this)
         // Send response
         res.status(200).json(issues);
     }
@@ -23,7 +22,6 @@ class IssueController {
     }
 
     createIssue(req: Request, res: Response) {
-        console.log(req.body, req.headers)
         // Create new issue object
         const issue = new Issue(req.body.title, req.body.description);
         // Print issue
@@ -42,7 +40,7 @@ class IssueController {
             issue.title = req.body.title;
             issue.description = req.body.description;
         }
-        // Print updared issue
+        // Print updated issue
         console.log(issue);
         // Send responce
         res.status(200).json(issue);
