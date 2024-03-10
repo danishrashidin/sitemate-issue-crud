@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors"
 
 // Routes
 import healthRoute from "./routes/health.route";
@@ -10,6 +11,7 @@ const router = express.Router();
 
 app.use(router);
 app.use(express.json());
+app.use(cors())
 
 // Health Check
 app.use("/", healthRoute);
